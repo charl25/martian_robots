@@ -14,7 +14,15 @@ def store_instructions(file_name):
 
 
 def move(loc,orientation):
-    pass
+    if orientation == 'N':
+        loc = (loc[0], loc[1] + 1)
+    elif orientation == 'S':
+        loc = (loc[0], loc[1] - 1)
+    elif orientation == 'E':
+        loc = (loc[0] + 1, loc[1])
+    elif orientation == 'W':
+        loc = (loc[0] - 1, loc[1])
+    return loc
 
 
 def turn(current, direction):
